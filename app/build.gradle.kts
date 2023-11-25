@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -33,15 +35,23 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    // Allow references to generated code
+    kapt {
+        correctErrorTypes = true
+    }
 }
 
 dependencies {
 
     val nav_version = "2.7.5"
+    val hilt_version = "2.46.1"
 
-    // Kotlin
+    // Jetpack navigation
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    // hilt
+    implementation("com.google.dagger:hilt-android:$hilt_version")
+    kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
