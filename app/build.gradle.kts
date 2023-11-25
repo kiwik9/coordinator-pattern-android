@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.chupi.cordinatorpatternandroid"
-    compileSdk = 33
+    namespace = "com.kiwik.cordinatorpatternandroid"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.chupi.cordinatorpatternandroid"
+        applicationId = "com.kiwik.cordinatorpatternandroid"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -22,7 +22,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -37,7 +37,13 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
+    val nav_version = "2.7.5"
+
+    // Kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
