@@ -1,4 +1,4 @@
-package com.chupi.cordinatorpatternandroid
+package com.kiwik.cordinatorpatternandroid
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

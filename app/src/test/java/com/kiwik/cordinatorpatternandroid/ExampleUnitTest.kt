@@ -1,4 +1,4 @@
-package com.chupi.cordinatorpatternandroid
+package com.kiwik.cordinatorpatternandroid
 
 import org.junit.Test
 

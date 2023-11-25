@@ -1,4 +1,4 @@
-package com.chupi.cordinatorpatternandroid
+package com.kiwik.cordinatorpatternandroid
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
