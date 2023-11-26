@@ -14,13 +14,13 @@
         android:theme="@style/Theme.CordinatorPatternAndroid"
         tools:targetApi="31">
         <activity
-            android:name=".business.BusinessActivity"
+            android:name=".features.business.BusinessActivity"
             android:exported="false" />
         <activity
-            android:name=".user.UserActivity"
+            android:name=".features.user.UserActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".features.auth.AuthActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

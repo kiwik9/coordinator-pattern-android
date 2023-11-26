@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kiwik.cordinatorpatternandroid.features.auth.login.LoginViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LoginFragment" />
+
+        <Button
+            android:id="@+id/goToUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.goToUser()}"
+            android:text="Go to User" />
+
+        <Button
+            android:id="@+id/goToBusiness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.goToBusiness()}"
+            android:text="Go to Business" />
+
+        <Button
+            android:id="@+id/goToRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.goToRegister()}"
+            android:text="Go to Register" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

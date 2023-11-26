@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_graph"
+    app:startDestination="@id/registerViewFragment">
+
+    <dialog
+        android:id="@+id/registerViewFragment"
+        android:name="com.kiwik.cordinatorpatternandroid.features.auth.register.views.RegisterViewFragment"
+        android:label="fragment_register_view"
+        tools:layout="@layout/fragment_register_view" >
+        <action
+            android:id="@+id/action_registerViewFragment_to_forgotPasswordViewFragment"
+            app:destination="@id/forgotPasswordViewFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/forgotPasswordViewFragment"
+        android:name="com.kiwik.cordinatorpatternandroid.features.auth.register.views.ForgotPasswordViewFragment"
+        android:label="fragment_forgot_password_view"
+        tools:layout="@layout/fragment_forgot_password_view" />
+</navigation>
